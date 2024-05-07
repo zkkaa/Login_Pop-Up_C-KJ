@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- ----------Link-CSS---------- -->
+
+
+    <!-- ----------Link-ICON---------- -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+
+    <style>
+        
+        /* ukuran lebar layar laptop => 1552px */
+
+        /* --------Link-FONT-------- */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+        :root {
+            /* ------COLOR------ */
+            --bg: #FEFBFB;
+            --bg-cont: #ffffff;
+            --txt1 : #5E95FE;
+            --block-actv : #61E16E;
+            --blck : black;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+        }
+
+        /* ==========Css_Sidebar========== */
+
+        nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 150px;
+            padding: 10px 14px;
+            background-color: var(--bg-cont);
+            overflow: hidden;
+            box-shadow: 0 0 10px grey;
+        }
+
+        nav .logo-apk {
+            display: flex;
+            padding: 5px;
+            border-bottom: 1px solid black;
+        }
+
+        nav .logo-image {
+            /* display: flex; */
+            justify-content: center;
+            
+        }
+
+        nav .logo-image img {
+            width: 65px;
+            margin-left: -4px;
+        }
+
+        nav .nama-apk {
+            /* display: flex; */
+            text-align: center;
+            margin-top: 17px;
+            color: var(--txt1);
+        }
+
+        nav  .transaksi_menu-items {
+            /* padding: 5px; */
+            height: 85%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .menu-items li {
+            list-style: none;
+        }
+
+        nav .menu-items li .active {
+            background-color: var(--block-actv);
+            font-weight: 500;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px grey;
+            color: #000000;
+        }
+
+
+        .menu-items li a {
+            display: block;
+            align-items: center;
+            margin-top: .5rem;
+            height: 80px;
+            border-radius: 15px;
+            color: grey;
+            text-decoration: none
+        }
+
+        nav .menu-items li a:hover{
+            background-color: var(--block-actv);
+            box-shadow: 0 5px 10px grey;
+            color: #000000;
+            font-weight: 500;
+        }
+
+        .menu-items li a i{
+            font-size: 24px;
+            padding-top: 15px;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blck);
+        }
+
+        .menu-items li a .ket{
+            display: list-item;
+            text-align: center;
+            font-weight: 300;
+            color: rgba(0, 0, 0, 0.700);
+        }
+
+        /* ==========Css_Navbar========== */
+
+        .navigasi {
+            position: fixed;
+            top: 0;
+            left: 150px;
+            height: 85px;
+            width: calc(100% - 150px);
+            background-color: var(--bg-cont);
+            /* overflow: hidden; */
+            box-shadow: 10px 0 10px grey;
+            display: flexbox;
+            z-index: 999;
+        }
+
+        .navigasi div {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+        }
+
+        .navigasi div .tanggal {
+            align-items: center; 
+        }
+
+        .navigasi div .tanggal a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .navigasi div .tanggal a span {
+            font-size: 20px;
+        }
+
+        .navigasi div .user {
+            display: flex;
+            align-items: center;
+        }
+
+        .navigasi div .user div {
+            justify-content: center;
+            padding-right: 5px;
+        }
+
+        .navigasi div .user div i {
+            font-size: 35px;
+            margin-bottom: 2px;
+        }
+
+        .navigasi div .user span {
+            font-size: 20px;
+            margin-top: 2px;
+        }
+
+        /* ==========Css_PopUp_Hapus========== */
+        .Div_PopUp_Hapus {
+            position: relative;
+            width: 22vw;
+            height: 22vh;
+            margin-top: 40vh;
+            margin-left: 45vw;
+            border-radius: 15px;
+            padding: 20px 20px;
+            border: 1px solid red;
+        }
+
+        .Div_PopUp_Hapus .PopUp_Hapus {
+            width: 100%;
+            height: 100%;
+        }
+
+        .PopUp_Hapus .popup-judul {
+            height: 5.5vh;
+            width: 100%;
+            align-content: center;
+            font-size: 20px;
+            font-weight: 500;
+            color: red;
+        }
+
+        .PopUp_Hapus .popup-des {
+            height: 6vh;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .PopUp_Hapus .btn_tidak-ya {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 4vh;
+            justify-content: center;
+        }
+
+        .btn_tidak-ya .btn-ya {
+            width: 35%;
+            height: 100%;
+            border-radius: 8px;
+            border: none;
+            background-color: #61E16E;
+        }
+
+    </style>    
+</head>
+<body>
+    
+
+    <!-- ==========Sidebar========== -->
+    
+    <nav>
+        <div class="logo-apk">
+            <div class="logo-image">
+                <img src="img/logo-apk.png" alt="">
+            </div>
+            <span class="nama-apk">C - Kj</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li>
+                    <a href="">
+                        <i class="ph ph-house"></i>
+                        <span class="ket">Beranda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="active">
+                        <i class="ph ph-folder-simple-plus"></i>
+                        <span class="ket">Data</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="ph ph-currency-circle-dollar"></i>
+                        <span class="ket">Transaksi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="ph ph-file"></i>
+                        <span class="ket">Rekap</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="keluar" >
+                <li>
+                    <a href="#">
+                        <i class="ph ph-sign-out"></i>
+                        <span class="ket">keluar</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <!-- ==========Navbar========== -->
+
+    <nav class="navigasi">
+        <div>
+            <div class="tanggal">
+                <a href="">
+                    <span>ini adalah tanggal</span>
+                </a>
+            </div>
+            <div class="user">
+                <div>
+                    <i class="ph ph-user-circle"></i>
+                </div>
+                <span>Dr. Raffi Fabiansyah</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==========PopUp_Hapus========== -->
+    <div class="Div_PopUp_Hapus">
+        <div class="PopUp_Hapus">
+            <div class="popup-judul">
+                <span>Pilih Bulan Terlebih Dahulu!</span>
+            </div>
+            <div class="popup-des">
+                <span>pilih bulan untuk print</span>
+            </div>
+            <div class="btn_tidak-ya">
+                <button class="btn-ya">Ya</button>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
