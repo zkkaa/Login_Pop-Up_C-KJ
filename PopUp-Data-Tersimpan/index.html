@@ -186,72 +186,74 @@
             margin-top: 2px;
         }
 
-        /* ==========Css_PopUp_Keluar========== */
-        .Div_PopUp_Keluar {
+        /* ==========Css_PopUp_Data-Tersimpan========== */
+        .Div_PopUp_Data-Tersimpan {
             position: relative;
-            width: 20vw;
-            height: 22vh;
+            width: 25vw;
+            height: 27vh;
             margin-top: 40vh;
-            margin-left: 45vw;
+            margin-left: 43vw;
             border-radius: 15px;
             padding: 20px 20px;
-            border: 1px solid black;
+            box-shadow: 2px 2px 5px grey;
         }
 
-        .Div_PopUp_Keluar .PopUp_Keluar {
+        .Div_PopUp_Data-Tersimpan .PopUp_Data-Tersimpan {
             width: 100%;
             height: 100%;
         }
 
-        .PopUp_Keluar .popup-judul {
-            height: 5.5vh;
-            width: 100%;
-            align-content: center;
-            font-size: 18px;
-            font-weight: 500;
-        }
-
-        .PopUp_Keluar .popup-des {
+        .PopUp_Data-Tersimpan .popup-gambar {
             height: 6vh;
             width: 100%;
-            font-size: 14px;
+            text-align: center;
+            color: #61E16E;
         }
 
-        .PopUp_Keluar .btn_tidak-ya {
+        .popup-gambar svg {
+            width: 3vw;
+            height: auto;
+        }
+
+        .PopUp_Data-Tersimpan .popup-judul {
+            height: 7vh;
+            width: 100%;
+            text-align: center;
+            align-content: end;
+            font-size: 24px;
+            font-weight: 500;
+            color: black;
+        }
+
+        .PopUp_Data-Tersimpan .popup-des {
+            height: 5vh;
+            width: 100%;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .PopUp_Data-Tersimpan .btn_tidak-ya {
             display: flex;
             justify-content: space-between;
             width: 100%;
             height: 4vh;
+            justify-content: end;
         }
 
-        .btn_tidak-ya .btn-tidak,
         .btn_tidak-ya .btn-ya {
-            width: 35%;
+            width: 25%;
             height: 100%;
             border-radius: 8px;
             border: none;
-            color: black;
-        }
-
-        .btn_tidak-ya .btn-tidak {
-            background-color: red;
-        }
-
-        .btn_tidak-ya .btn-tidak:active {
-            border: 1px solid red;
-            color: red;
-            background-color: #ffffff;
-        }
-
-        .btn_tidak-ya .btn-ya {
             background-color: #61E16E;
         }
 
         .btn_tidak-ya .btn-ya:active {
-            border: 1px solid #61E16E;
             color: #61E16E;
+            border: 1px solid #61E16E;
             background-color: #ffffff;
         }
+
     </style>    
 </head>
 <body>
@@ -325,17 +327,21 @@
         </div>
     </nav>
 
-    <!-- ==========PopUp_Keluar========== -->
-    <div class="Div_PopUp_Keluar">
-        <div class="PopUp_Keluar">
+    <!-- ==========PopUp_Data-Tersimpan========== -->
+    <div class="Div_PopUp_Data-Tersimpan">
+        <div class="PopUp_Data-Tersimpan">
+            <div class="popup-gambar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 0C229.232 0 0 229.232 0 512c0 282.784 229.232 512 512 512c282.784 0 512-229.216 512-512C1024 229.232 794.784 0 512 0m0 961.008c-247.024 0-448-201.984-448-449.01c0-247.024 200.976-448 448-448s448 200.977 448 448s-200.976 449.01-448 449.01m204.336-636.352L415.935 626.944l-135.28-135.28c-12.496-12.496-32.752-12.496-45.264 0c-12.496 12.496-12.496 32.752 0 45.248l158.384 158.4c12.496 12.48 32.752 12.48 45.264 0c1.44-1.44 2.673-3.009 3.793-4.64l318.784-320.753c12.48-12.496 12.48-32.752 0-45.263c-12.512-12.496-32.768-12.496-45.28 0"/></svg>
+            </div>
             <div class="popup-judul">
-                <span>Keluar?</span>
+                <span>
+                    Tersimpan
+                </span>
             </div>
             <div class="popup-des">
-                <span>Anda yakin ingin keluar?</span>
+                <span>Data anda telah tersimpan</span>
             </div>
             <div class="btn_tidak-ya">
-                <button class="btn-tidak">Tidak</button>
                 <button class="btn-ya">Ya</button>
             </div>
         </div>
